@@ -1,20 +1,31 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Dashboard from "./components/teacher/Dashboard";
-import MockBuilder from "./components/teacher/MockBuilder";
-import Landing from "./components/student/Landing";
-import ExamSimulator from "./components/student/ExamSimulator";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./common/AuthContext";
+import ProtectedRoute from "./common/ProtectedRoute";
+import Dashboard from "./teacher/Dashboard";
+import MockBuilder from "./teacher/MockBuilder";
+import Landing from "./student/Landing";
+import ExamSimulator from "./student/ExamSimulator";
+import Login from "./common/Login";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigate to="/student" replace />} />
-        <Route path="/student" element={<Landing />} />
-        <Route path="/student/exam/:id" element={<ExamSimulator />} />
-        <Route path="/teacher" element={<Dashboard />} />
-        <Route path="/teacher/builder/:id" element={<MockBuilder />} />
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/exam/:id" element={
+            <ProtectedRoute><ExamSimulator /></ProtectedRoute>
+          } />
+          <Route path="/teacher" element={
+            <ProtectedRoute role="teacher"><Dashboard /></ProtectedRoute>
+          } />
+          <Route path="/teacher/builder/:id" element={
+            <ProtectedRoute role="teacher"><MockBuilder /></ProtectedRoute>
+          } />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

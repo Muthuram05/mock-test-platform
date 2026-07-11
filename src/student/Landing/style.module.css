@@ -1,0 +1,245 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg-card);
+  font-family: var(--font-sans);
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  height: 60px;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background: var(--bg-card);
+  z-index: 10;
+}
+
+.navBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.navTitle {
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--color-primary);
+}
+
+.badge {
+  background: #e0f2fe;
+  color: #0284c7;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-left: 4px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.navLink {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navBtn {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 24px 60px;
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+
+.heroSub {
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  margin: 0 0 8px;
+  font-weight: 400;
+}
+
+.heroDesc {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  max-width: 480px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Waitlist */
+.waitlistRow {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto 60px;
+}
+
+.waitlistInput {
+  flex: 1;
+  border: 1.5px solid #ddd;
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+
+.waitlistBtn {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.joinedBadge {
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+/* CTA */
+.cta {
+  margin-bottom: 60px;
+}
+
+.ctaTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.ctaDesc {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.ctaBtn {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Mock list */
+.mockList {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.mockListTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.mockCards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mockCard {
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.mockCard:hover {
+  border-color: var(--color-border-mid);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.mockInfo {
+  flex: 1;
+}
+
+.mockTitle {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.mockMeta {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.startBtn {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-light);
+}

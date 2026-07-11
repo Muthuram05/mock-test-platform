@@ -1,3 +1,9 @@
+export const users = [
+  { id: 1, email: "teacher@aspiro.com", password: "teacher123", role: "teacher", name: "Aspiro Admin" },
+  { id: 2, email: "rahul@gmail.com",    password: "rahul123",   role: "student", name: "Rahul Kumar" },
+  { id: 3, email: "priya@gmail.com",    password: "priya123",   role: null,      name: "Priya Singh" },
+];
+
 export const stats = {
   activeMocks: 4,
   totalStudentsAttempted: 758166,
